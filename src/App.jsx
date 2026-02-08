@@ -9,6 +9,9 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminMessages from './pages/AdminMessages';
 import ProjectEditor from './pages/ProjectEditor';
+import BlogPostEditor from './pages/BlogPostEditor';
+import Blog from './pages/Blog';
+import PostDetail from './pages/PostDetail';
 import Notification from './components/Notification';
 
 function App() {
@@ -41,12 +44,16 @@ function App() {
         <Route path="/proyecto/:slug" element={<ProjectDetail />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<PostDetail />} />
 
         {/* Rutas Administrativas */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/admin/proyecto/nuevo" element={<ProjectEditor />} />
         <Route path="/admin/proyecto/editar/:id" element={<ProjectEditor />} />
+        <Route path="/admin/blog/nuevo" element={<BlogPostEditor />} />
+        <Route path="/admin/blog/editar/:id" element={<BlogPostEditor />} />
         <Route path="/admin/mensajes" element={<AdminMessages />} />
       </Routes>
     </>

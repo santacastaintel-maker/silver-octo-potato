@@ -57,6 +57,24 @@ export function useProjects() {
         }
     };
 
+    // Obtener un proyecto por su ID (para editar)
+    const getProjectById = async (id) => {
+        try {
+            const { data, error: fetchError } = await supabase
+                .from('projects_full')
+                .select('*')
+                .eq('id', id)
+                .single();
+
+            if (fetchError) throw fetchError;
+
+            return data;
+        } catch (err) {
+            console.error('Error al obtener proyecto por ID:', err);
+            return null;
+        }
+    };
+
     // Obtener proyectos destacados
     const getFeaturedProjects = async () => {
         try {
@@ -150,6 +168,7 @@ export function useProjects() {
         loading,
         error,
         fetchProjects,
+        getProjectById,
         getProjectBySlug,
         getFeaturedProjects,
         createProject,

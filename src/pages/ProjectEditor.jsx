@@ -103,7 +103,11 @@ export default function ProjectEditor() {
 
         try {
             const cover_image_url = await uploadImage();
-            const finalData = { ...formData, cover_image_url };
+
+            // Limpiamos los datos para enviar solo lo que la tabla 'projects' acepta
+            // Evitamos enviar 'category_name' o 'category_slug' que vienen de la vista
+            const { category_name, category_slug, ...cleanData } = formData;
+            const finalData = { ...cleanData, cover_image_url };
 
             let result;
             if (isEditing) {

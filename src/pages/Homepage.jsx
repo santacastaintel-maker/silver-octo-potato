@@ -70,7 +70,7 @@ export default function Homepage() {
                                 <span className="masthead__bio-slash">///</span>
                             </div>
                             <p className="masthead__bio-text">
-                                Building robust digital architectures with an artistic soul. Bridging the gap between brutalist design and functional code.
+                                Construyedo apps a fevor del tiempo, haciendo arte como hobbie.
                             </p>
                             <nav className="masthead__nav">
                                 <Link to="/proyectos">PROYECTOS</Link>
@@ -85,7 +85,7 @@ export default function Homepage() {
                 {/* TICKER */}
                 <div className="ticker">
                     <div className="ticker__content">
-                        +++ BREAKING: NEW REACT COMPONENT RELEASED +++ AVAILABLE FOR FREELANCE +++ CHECK GITHUB FOR UPDATES +++ UI/UX DESIGN TRENDS 2024 +++
+                        +++ BREAKING: EL PRIMER TALENTO DE LOS CAZATALENTO ES EL TALENTO PROPIO +++ OJOS PARE VER LUZ Y SOMBRA +++ UI/UX DESIGN TRENDS 2026 +++
                     </div>
                 </div>
             </header>
@@ -175,10 +175,10 @@ export default function Homepage() {
                                     <li className="headline-item">
                                         <span className="headline-item__date">Oct 12, 2024</span>
                                         <h5 className="headline-item__title">
-                                            Why Minimalism is Dead: Return to Complex UI
+                                            El arte como indicador de amor propio
                                         </h5>
                                         <p className="headline-item__excerpt">
-                                            Analyzing the shift from flat design to neo-brutalism and constructivism in web.
+                                           El arte no es bueno o malo; es propio o robado.
                                         </p>
                                     </li>
 
