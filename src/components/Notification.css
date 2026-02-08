@@ -1,0 +1,144 @@
+/* ============================================
+   NOTIFICACIONES CONSTRUCTIVISTAS
+   Sistema de feedback visual sin alert()
+   ============================================ */
+
+.notification {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 1.25rem;
+  background: #f9f5eb;
+  border: 4px solid #121212;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 9999;
+  font-family: 'Roboto Mono', monospace;
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification__icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid;
+}
+
+.notification__message {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #121212;
+}
+
+.notification__close {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: 2px solid #121212;
+  color: #121212;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.notification__close:hover {
+  background: #121212;
+  color: #f9f5eb;
+}
+
+/* Variantes de tipo */
+.notification--success {
+  border-color: #16a34a;
+}
+
+.notification--success .notification__icon {
+  background: #16a34a;
+  color: white;
+  border-color: #16a34a;
+}
+
+.notification--error {
+  border-color: #d32f2f;
+}
+
+.notification--error .notification__icon {
+  background: #d32f2f;
+  color: white;
+  border-color: #d32f2f;
+}
+
+.notification--warning {
+  border-color: #f59e0b;
+}
+
+.notification--warning .notification__icon {
+  background: #f59e0b;
+  color: white;
+  border-color: #f59e0b;
+}
+
+.notification--info {
+  border-color: #3b82f6;
+}
+
+.notification--info .notification__icon {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .notification {
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+    min-width: auto;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .notification {
+    background: #1a1a1a;
+    color: #e5e5e5;
+  }
+
+  .notification__message {
+    color: #e5e5e5;
+  }
+
+  .notification__close {
+    border-color: #e5e5e5;
+    color: #e5e5e5;
+  }
+
+  .notification__close:hover {
+    background: #e5e5e5;
+    color: #1a1a1a;
+  }
+}

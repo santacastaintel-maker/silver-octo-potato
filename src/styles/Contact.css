@@ -1,0 +1,221 @@
+/* ============================================
+   CONTACTO - ESTÉTICA CARTEL CONSTRUCTIVISTA
+   ============================================ */
+
+.contact-page {
+    min-height: 100vh;
+    padding: 8rem 0 4rem;
+    background-color: var(--color-bg-light);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .contact-layout {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+/* Columna de Información */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info__title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 8rem);
+    line-height: 0.8;
+    color: var(--color-ink);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.contact-info__title span {
+    color: var(--color-primary);
+    display: block;
+    transform: translateX(1rem);
+}
+
+.contact-info__description {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    border-left: 8px solid var(--color-primary);
+    padding-left: 1.5rem;
+}
+
+.contact-details {
+    list-style: none;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.contact-details li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details label {
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.contact-details span {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    word-break: break-all;
+}
+
+/* Columna del Formulario */
+.contact-form-container {
+    background: #ffffff;
+    padding: 3rem;
+    border: 4px solid var(--color-ink);
+    box-shadow: 20px 20px 0px 0px var(--color-ink);
+    position: relative;
+    z-index: 100 !important;
+    /* Estar por encima de TODO */
+}
+
+@media (max-width: 640px) {
+    .contact-form-container {
+        padding: 1.5rem;
+        box-shadow: 10px 10px 0px 0px var(--color-ink);
+    }
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    position: relative;
+    z-index: 101;
+}
+
+/* Input Styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-label {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: var(--color-ink);
+}
+
+.form-input,
+.form-textarea {
+    padding: 1rem;
+    border: 4px solid var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    background: #ffffff;
+    /* Fondo sólido blanco */
+    color: #000000;
+    /* Texto negro siempre */
+    transition: all var(--transition-fast);
+    width: 100%;
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    background: var(--color-accent-beige);
+    box-shadow: 6px 6px 0px 0px var(--color-primary);
+    transform: translate(-3px, -3px);
+}
+
+/* Botón de Envío */
+.btn-submit {
+    background: var(--color-primary);
+    color: white;
+    border: 4px solid var(--color-ink);
+    padding: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all var(--transition-fast);
+    margin-top: 1rem;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background: var(--color-ink);
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px 0px var(--color-primary);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+/* Decoraciones */
+.contact-decoration {
+    position: absolute;
+    bottom: -4rem;
+    right: -2rem;
+    width: 10rem;
+    height: 10rem;
+    background: var(--color-primary);
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Dark Mode */
+.dark-mode .contact-page {
+    background-color: var(--color-bg-dark);
+}
+
+.dark-mode .contact-info__title {
+    color: var(--color-ink-dark);
+}
+
+.dark-mode .contact-form-container {
+    background: #111;
+    border-color: var(--color-ink-dark);
+    box-shadow: 20px 20px 0px 0px var(--color-primary);
+}
+
+.dark-mode .form-label {
+    color: var(--color-ink-dark);
+}
+
+.dark-mode .form-input,
+.dark-mode .form-textarea {
+    color: white;
+    border-color: var(--color-ink-dark);
+}
+
+.dark-mode .form-input:focus,
+.dark-mode .form-textarea:focus {
+    background: #222;
+}
+
+.dark-mode .btn-submit {
+    border-color: var(--color-ink-dark);
+}
