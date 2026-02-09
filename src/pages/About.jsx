@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/About.css';
+import maguito from '../assets/maguito.jpg';
 
 export default function About() {
     return (
@@ -45,8 +46,8 @@ export default function About() {
                         </p>
 
                         <img
-                            src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800"
-                            alt="Work in progress"
+                            src={maguito}
+                            alt="Maguito"
                             className="img-newspaper"
                             style={{ width: '100%', marginTop: '3rem', border: '4px solid var(--color-ink)' }}
                         />
