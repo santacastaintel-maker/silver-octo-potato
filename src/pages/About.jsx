@@ -39,10 +39,10 @@ export default function About() {
                             Me llamo <strong>Cha Castañeda</strong>, y mi trabajo habita en la frontera invisible donde el diseño gráfico, la ilustración y el desarrollo web se encuentran con la energía cruda del arte de calle.
                         </p>
                         <p>
-                            Con más de dos décadas explorando formas y colores, he aprendido que el orden del código no es el enemigo de la creatividad, sino su esqueleto. Como <strong>desarrollador web </strong>, construyo arquitecturas digitales robustas; como artista, las subvierto con texturas, contrastes y una estética constructivista que rinde homenaje a la vanguardia rusa y el urbanismo contemporáneo.
+                            Con más de dos décadas explorando formas y colores, he aprendido que el orden del código no es el enemigo de la creatividad, sino su esqueleto. Como <strong>desarrollador web </strong>, construyo arquitecturas digitales robustas; como artista, las subvierto con texturas, contrastes y mecánicas artesanales.
                         </p>
                         <p>
-                            Mi enfoque es la <strong>articulación digital artesanal</strong>: cada sitio que construyo es una obra única, huyendo de los frameworks genéricos para buscar una identidad visual que grite por sí misma.
+                            Mi enfoque es la <strong>articulación digital funcional</strong>: cada sitio que construyo es una obra única, huyendo de los frameworks genéricos para buscar una identidad visual que grite por sí misma.
                         </p>
 
                         <img
